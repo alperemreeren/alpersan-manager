@@ -131,7 +131,7 @@ _Below is an example of how you can instruct your audience on installing and set
    ```
 6. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/alperemreeren/alpersan-manager.git
    ```
 5. Initialize the Firebase
 6. Select the project you've created
