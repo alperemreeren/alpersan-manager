@@ -20,7 +20,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/alperemreeren/alpersan-manager">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -141,7 +141,32 @@ _Below is an example of how you can instruct your audience on installing and set
    ```
 7. Enter your configuration codes in `src/firebase/config.js`
    ```js
-   const API_KEY = 'ENTER YOUR API';
+    import firebase from 'firebase/app'
+    import 'firebase/firestore'
+    import 'firebase/auth'
+    import 'firebase/storage'
+
+    const firebaseConfig = {
+        apiKey: "API_KEY",
+        authDomain: "DOMAIN.firebaseapp.com",
+        projectId: "PROJECT_ID",
+        storageBucket: "BUCKET.appspot.com",
+        messagingSenderId: "MESSAGING_SENDER_ID",
+        appId: "APP_ID"
+    };
+
+    // init firebase
+    firebase.initializeApp(firebaseConfig)
+
+    // init services
+    const firestoreInst = firebase.firestore()
+    const authInst = firebase.auth()
+    const storageInst = firebase.storage()
+
+    // timestamp
+    const timestamp = firebase.firestore.Timestamp
+
+    export { firestoreInst, authInst, storageInst, timestamp }
    ```
 8. Deploy your App
    ```sh
@@ -242,7 +267,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
 [issues-url]: https://github.com/othneildrew/Best-README-Template/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[license-url]: https://github.com/alperemreeren/alpersan-manager/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[linkedin-url]: https://www.linkedin.com/in/alper-emre-eren/
 [product-screenshot]: https://github.com/alperemreeren/alpersan-manager/blob/introduction/screenshot.png
